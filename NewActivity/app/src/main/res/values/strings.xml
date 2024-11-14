@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewActivity</string>
+    <string name="Name_btn_show_pic">КНОПКА С КАРТИНКОЙ</string>
+    <string name="title_activity_pic">PicActivity</string>
+</resources>
