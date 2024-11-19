@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         val picLink = link
         val intent = Intent(this, PicViewer::class.java)
         intent.putExtra("picLink", picLink)
-        startActivity(intent)
+        startActivityForResult(intent, 1)
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             val imageUrl = data?.getStringExtra("image_url")
             val imageFavorited = data?.getBooleanExtra("image_favorited", false)
 
